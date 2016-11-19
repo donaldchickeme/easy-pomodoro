@@ -21,7 +21,7 @@ Import [PullToRefresh-ListView](https://github.com/erikwt/PullToRefresh-ListView
 
 * [PullToRefresh-ListView](https://github.com/erikwt/PullToRefresh-ListView)
 * [Android-ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator)
-* Dacer(Original Developer)
+* [Dacer - Original Developer](https://github.com/dacer)
 
 ## Contributing
 
