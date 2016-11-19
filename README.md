@@ -1,8 +1,5 @@
-# PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED
 
-* * *
-
-# Simple Pomodoro [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.dacer.simplepomodoro)
+# Easy Pomodoro [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=me.donaldepignosis.pomodoro)
 
 <h3>This a pomodoro timer android app.</h3>
 <p>
@@ -24,7 +21,7 @@ Import [PullToRefresh-ListView](https://github.com/erikwt/PullToRefresh-ListView
 
 * [PullToRefresh-ListView](https://github.com/erikwt/PullToRefresh-ListView)
 * [Android-ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator)
-* tossking(Neo Tian)-帮助我发布到Google Play
+* Dacer(Original Developer)
 
 ## Contributing
 
