@@ -1,0 +1,101 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.donaldepignosis.pomodoro"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--    Google task     -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <!-- Silent Mode -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <application
+        android:name=".dacer.utils.GlobalContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".simplepomodoro.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MyMainScreenTheme_Black"
+            android:configChanges = "orientation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".simplepomodoro.PomoRunningActivity"
+            android:label="@string/title_activity_pomo_running"
+            android:launchMode="singleTask"
+            android:theme="@style/MyMainScreenTheme_Black">
+        </activity>
+        <activity
+            android:name=".simplepomodoro.SettingActivity"
+            android:label="@string/title_activity_Preference"
+            android:theme="@style/SettingTheme" >
+        </activity>
+        <activity
+            android:name=".simplepomodoro.BreakActivity"
+            android:label="@string/title_activity_break"
+            android:launchMode="singleTask"
+            android:theme="@style/MyMainScreenTheme_Black" >
+        </activity>
+        <activity
+            android:name=".simplepomodoro.FinishScreenActivity"
+            android:label="@string/title_activity_finish_screen"
+            android:launchMode="singleTask"
+            android:theme="@style/MyMainScreenTheme_Black" >
+        </activity>
+        <activity
+            android:name=".simplepomodoro.BreakFinishActivity"
+            android:label="@string/title_activity_finish_screen"
+            android:theme="@style/MyMainScreenTheme_White" >
+        </activity>
+        <activity
+            android:name=".simplepomodoro.PlaneFighterActivity"
+            android:label="@string/title_activity_finish_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMainScreenTheme_White" >
+        </activity>
+        <service android:name="dacer.service.CDService" />
+        <service android:name="dacer.service.BreakFinishService" />
+        <service android:name="dacer.service.WakeLockService" />
+        <service android:name="dacer.service.ScreenLockerService" />
+
+        <!-- device admin -->
+        <receiver
+            android:name="dacer.utils.AdminReceiver"
+            android:description="@string/app_name"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/lock_screen" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

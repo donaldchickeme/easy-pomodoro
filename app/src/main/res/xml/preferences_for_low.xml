@@ -1,0 +1,60 @@
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:robobunny="http://robobunny.com">
+    <PreferenceCategory android:title="@string/pref_title_display">
+        <ListPreference android:dialogTitle="@string/pref_theme" android:entryValues="@array/pref_theme_list_values" android:entries="@array/pref_theme_list" android:title="@string/pref_theme" android:key="pref_theme_type" android:defaultValue="black"/>
+        <CheckBoxPreference android:title="@string/pref_enable_fullscreen" android:key="pref_enable_fullscreen" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="@string/pref_lights_on" android:summary="@string/pref_lights_on_summary" android:key="pref_lights_on"/>
+            <ListPreference android:entryValues="@array/pref_first_day_values" android:entries="@array/pref_first_day_list" android:title="@string/pref_first_day" android:key="pref_first_day" android:dialogTitle="@string/pref_first_day" android:defaultValue="sunday"/>
+            <me.donaldepignosis.pomodoro.robobunny.SeekBarPreference  robobunny:interval="1" android:max="30" robobunny:min="1" android:key="pref_daily_goal_new" android:title="@string/pref_daily_goal" android:defaultValue="6" />
+        </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_timer_settings">
+			
+        <me.donaldepignosis.pomodoro.robobunny.SeekBarPreference 
+            robobunny:interval="1" 
+            android:max="60"
+            robobunny:min="10" 
+            android:key="pref_pomodoro_duration_new" 
+            android:title="@string/pref_pomodoro_duration" 
+            android:defaultValue="52" />
+        <me.donaldepignosis.pomodoro.robobunny.SeekBarPreference 
+            robobunny:interval="1" 
+            android:max="20" 
+            robobunny:min="1" 
+            android:key="pref_break_duration_new" 
+            android:title="@string/pref_break_duration" 
+            android:defaultValue="17" />
+        <me.donaldepignosis.pomodoro.robobunny.SeekBarPreference 
+            robobunny:interval="1" 
+            android:max="40" 
+            robobunny:min="5" 
+            android:key="pref_long_break_duration_new" 
+            android:title="@string/pref_long_break_duration"  
+            android:defaultValue="25" />
+			<CheckBoxPreference android:title="@string/pref_enable_vibrations" android:key="pref_enable_vibrations"/>
+            <CheckBoxPreference android:title="@string/pref_enable_ticking" android:key="pref_enable_ticking"/>
+            <RingtonePreference android:showSilent="true" android:showDefault="true" android:title="@string/pref_notification_sound" android:ringtoneType="notification" android:key="pref_notification_sound"/>
+        
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_labs">
+        <CheckBoxPreference android:title="@string/pref_fast_mode" android:key="pref_fast_mode" android:summary="@string/pref_fast_mode_summary"/>
+        <Preference android:key="pref_remove_manage" android:summary="@string/pref_remove_manage_summary" android:title="@string/pref_remove_manage"/>
+        <CheckBoxPreference android:title="@string/pref_silent_mode" android:key="pref_silent_mode" android:summary="@string/pref_silent_mode_summary"/>
+            <CheckBoxPreference android:title="@string/pref_sync_with_google_task" android:key="pref_sync_with_google_task"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/thanks">
+    			<Preference android:summary="@string/help_me_publish_app" android:title="@string/tossking" />
+    			<Preference android:summary="@string/jonathan_gall_summary" android:title="@string/jonathan_gall" />
+    			<Preference android:summary="@string/jose_miguel_urdaneta_summary" android:title="@string/jose_miguel_urdaneta" />
+    			<Preference android:summary="@string/maciej_summary" android:title="@string/maciej" />
+    </PreferenceCategory>
+    		
+    <PreferenceCategory android:title="@string/pref_title_info">
+    	<PreferenceScreen android:summary="@string/dacer" android:title="@string/author" android:key="pref_author"></PreferenceScreen>
+        <PreferenceScreen android:title="@string/pref_email_us" android:key="pref_email_us"></PreferenceScreen>    
+    	<PreferenceScreen android:summary="@string/donate_summary" android:title="@string/donate_via" android:key="donate"></PreferenceScreen>
+    	<PreferenceScreen android:title="@string/pref_about" android:key="pref_about" android:summary="@string/pref_about_summary"></PreferenceScreen>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
