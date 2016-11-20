@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Easy Pomodoro</string>
+    <string name="app_name">Pomodoro</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_pomo_running">PomoRunning</string>
     <string name="title_activity_finish_screen">Finish</string>

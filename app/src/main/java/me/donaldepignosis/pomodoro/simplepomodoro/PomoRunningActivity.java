@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 
 import me.donaldepignosis.pomodoro.R;
 import me.donaldepignosis.pomodoro.dacer.interfaces.OnClickCircleListener;
@@ -32,6 +34,7 @@ public class PomoRunningActivity extends Activity implements OnClickCircleListen
 	private int width;
 	private int height;
 	private float bigCirRadius;
+	private FrameLayout parentView;
 
 	private enum CenterSize{NONE,MIDDLE,BIG};
 	private CenterSize centerSize = CenterSize.MIDDLE;
@@ -67,7 +70,13 @@ public class PomoRunningActivity extends Activity implements OnClickCircleListen
 				getString(R.string.start), 0, this, CircleView.RunMode.MODE_ONE);
 		
 		showContinueView();
-		setContentView(mView);
+		parentView = new FrameLayout(this);
+		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+		parentView.setLayoutParams(layoutParams);
+
+		parentView.addView(mView);
+
+		setContentView(parentView);
 		
         
 		  win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -117,6 +126,9 @@ public class PomoRunningActivity extends Activity implements OnClickCircleListen
 
   		     @Override
 			public void onFinish() {
+				 Intent i = new Intent(PomoRunningActivity.this, FinishScreenActivity.class);
+				 //i.putExtra(MyUtils.INTENT_IS_FULLSCREEN, true);
+				 startActivity(i);
   		    	 finish();
   		     }
   		  }.start();
@@ -195,8 +207,7 @@ public class PomoRunningActivity extends Activity implements OnClickCircleListen
 //			break;
 //		}
 	}
-	
-	
+
 	private void showContinueView(){
 		
 		final int leftTimeInSec;
@@ -219,6 +230,8 @@ public class PomoRunningActivity extends Activity implements OnClickCircleListen
 		startCountDown(leftTimeInSec, SettingUtility.getPomodoroDuration(), this);
 
 	}
+
+
 
 //	private void hideSystemUI() {
 //	    // Set the IMMERSIVE flag.

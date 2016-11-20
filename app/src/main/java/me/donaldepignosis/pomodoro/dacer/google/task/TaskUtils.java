@@ -22,7 +22,7 @@ import me.donaldepignosis.pomodoro.dacer.settinghelper.SettingUtility;
  * Used to deal with data between local and web
  */
 public class TaskUtils {
-	public static final String LIST_NAME = "SimplePomodoro";
+	public static final String LIST_NAME = "EasyPomodoro";
 
 	public static void initWebList(Context c,Tasks tasks) throws IOException{
 		TaskWebUtils tWebUtils;

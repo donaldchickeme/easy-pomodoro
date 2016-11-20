@@ -41,7 +41,8 @@ public class MyPomoRecorder {
 	}
 	
 	public void close() {
-        db.close();
+		if(db != null)
+        	db.close();
     }
 	
 	public void putPomodoro(String title, String notes,PomoType mType,int durationMin){

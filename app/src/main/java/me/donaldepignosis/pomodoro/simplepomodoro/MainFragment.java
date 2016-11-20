@@ -83,13 +83,16 @@ public class MainFragment extends Fragment implements OnClickCircleListener,Circ
                 	 }
                 	 if(sweep<= 0){
                 		 run = false;
-                		 Intent intent = new Intent();
-                		 intent.setClass(mContext, 
-                				 PomoRunningActivity.class);
-                		 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                		 startActivity(intent);
-                		 getActivity().finish();
-                		 getActivity().overridePendingTransition(0, 0);
+						 if(isAdded()){
+							 Intent intent = new Intent();
+							 intent.setClass(mContext,
+									 PomoRunningActivity.class);
+							 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+							 startActivity(intent);
+							 getActivity().finish();
+							 getActivity().overridePendingTransition(0, 0);
+						 }
+
                 	 }
                 	 Thread.sleep(10);       
                  } catch (InterruptedException e) {      

@@ -118,7 +118,7 @@ public class BreakActivity extends Activity {
         			}
         		})
               	.create();
-        		d.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        		d.getWindow();
         		d.show();
         	return false;
         }
@@ -168,6 +168,10 @@ public class BreakActivity extends Activity {
 
  		    @Override
 			public void onFinish() {
+				Intent intent = new Intent();
+				intent.setClass(BreakActivity.this, BreakFinishActivity.class);
+				//intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intent);
  		    	finish();
  		    }
  		  }.start();

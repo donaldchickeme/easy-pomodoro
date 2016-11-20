@@ -27,7 +27,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/tv_title_record"
         android:background="#80000000"
-        android:src="@drawable/ic_action_overflow" />
+        android:src="@drawable/ic_settings_white_48dp" />
 
        <me.donaldepignosis.pomodoro.dacer.views.WeekCirView
         android:id="@+id/weekCirView"

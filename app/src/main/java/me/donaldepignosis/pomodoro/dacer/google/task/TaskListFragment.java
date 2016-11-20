@@ -49,8 +49,6 @@ import me.donaldepignosis.pomodoro.dacer.settinghelper.SettingUtility;
 import me.donaldepignosis.pomodoro.dacer.utils.GlobalContext;
 import me.donaldepignosis.pomodoro.dacer.utils.MyUtils;
 
-import static me.donaldepignosis.pomodoro.R.string.dacer;
-
 
 /**
  * Author:dacer
@@ -205,7 +203,7 @@ public class TaskListFragment extends Fragment implements DialogDismissListener 
 		// Tasks client
 		service =
 		        new com.google.api.services.tasks.Tasks.Builder(transport, jsonFactory, credential)
-		            .setApplicationName("SimplePomodoro").build();
+		            .setApplicationName("EasyPomodoro").build();
 		checkGooglePlayServicesAvailable();
 //		}
 	}
@@ -360,7 +358,8 @@ public class TaskListFragment extends Fragment implements DialogDismissListener 
 	 @Override
 		public void onDestroy(){
 			super.onDestroy();
-			cr.close();
+		 	if(cr != null)
+				cr.close();
 		}
 		
 }

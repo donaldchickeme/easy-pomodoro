@@ -6,7 +6,7 @@
 Features:<br>
 • FAST MODE - Auto lock/unlock screen and you can forget your lockscreen button, just focus on your work!<br>
 • Full function - White/Black theme, lights on, weekly statistics, vibrations, alert, etc.<br>
-• Beautiful & Simple - SimplePomodoro is beautifully designed, simple to use and user friendly.<br>
+• Beautiful & Simple - Easy Pomodoro is beautifully designed, simple to use and user friendly.<br>
 • Google task - Sync your tasks between your device and Google.
 </p>
 

@@ -56,10 +56,10 @@ public class RecordFragment extends Fragment {
 		ImageButton settingButton = (ImageButton)rootView.findViewById(R.id.btn_setting);
 
 		if(SettingUtility.isLightTheme()){
-			settingButton.setImageResource(R.drawable.ic_action_overflow_gray);
+			settingButton.setImageResource(R.drawable.ic_settings_black_48dp);
 			settingButton.setBackgroundColor(Color.parseColor("#ffffff"));
 		}else{
-			settingButton.setImageResource(R.drawable.ic_action_overflow);
+			settingButton.setImageResource(R.drawable.ic_settings_white_48dp);
 			settingButton.setBackgroundColor(Color.parseColor("#000000"));
 		}
 		settingButton.setOnClickListener(new OnClickListener() {
